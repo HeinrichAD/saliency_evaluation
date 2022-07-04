@@ -1,9 +1,11 @@
+import copy
+import math
+import numpy as np
 import torch
 from torch.autograd import Variable
-import copy
-import numpy as np
-from explanations import GuidedBackpropReLUModel
-import math
+
+from .explanations import GuidedBackpropReLUModel
+
 
 FORWARD_BZ = 5000
 
@@ -338,7 +340,7 @@ def evaluate_infid_sen(loader, model, exp, pert, sen_r, sen_N, sg_r=None, sg_N=N
 
         max_diff = -math.inf
         sens = get_exp_sens(X, model, expl,exp, y[0], pdt, sg_r, sg_N,sen_r,sen_N,norm,binary_I,given_expl)
-        #for _ in range(sen_N):   
+        #for _ in range(sen_N):
             #sample = torch.FloatTensor(sample_eps_Inf(X.cpu().numpy(), sen_r, 1)).cuda()
             #X_noisy = X + sample
             #expl_eps, _ = get_explanation_pdt(X_noisy, model, y[0], exp, sg_r, sg_N,

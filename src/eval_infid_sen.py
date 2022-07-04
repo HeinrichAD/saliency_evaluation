@@ -1,7 +1,8 @@
+import loader
 import numpy as np
 import torch
-import loader
-from infid_sen_utils import evaluate_infid_sen
+
+from saliency_evaluation.infid_sen_utils import evaluate_infid_sen
 import config
 
 

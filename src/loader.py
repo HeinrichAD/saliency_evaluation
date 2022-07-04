@@ -1,10 +1,10 @@
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.parameter import Parameter
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
-import numpy as np
 
 
 def mnist_loaders(batch_size):

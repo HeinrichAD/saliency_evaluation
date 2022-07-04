@@ -1,7 +1,7 @@
-import torch
-from torch.autograd import Variable
-from torch.autograd import Function
 import numpy as np
+
+import torch
+from torch.autograd import Function, Variable
 
 
 class GuidedBackpropReLU(Function):
